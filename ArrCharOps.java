@@ -167,17 +167,17 @@ public class ArrCharOps {
             return 0;
         }
         
-        long arrHashCode = 0;
+        double arrHashCode = 0;
         for(int i = 0; i < arr.length; i ++) {
             int lengthOfArr = 1;
-            arrHashCode = arrHashCode + arr[i] * 7 ^ (arr.length - lengthOfArr);
+            arrHashCode = arrHashCode + arr[i] * Math.pow(7, (arr.length - lengthOfArr));
             if (lengthOfArr != arr.length) {
 
                 lengthOfArr ++;
 
             } else lengthOfArr = 0;
         }
-        return arrHashCode;
+        return (long)arrHashCode;
     }
 
     /**

@@ -46,7 +46,7 @@ public class Primes {
 
         int percent = (counter % n );
 
-        System.out.println("There are " + counter + " primes between 2 and " + n + ". " + "(" + percent + "% " + "are " + "primes)");
+        System.out.println("There are " + counter + " primes between 2 and " + n + " " + "(" + percent + "% " + "are " + "primes)");
      
     }
 }
