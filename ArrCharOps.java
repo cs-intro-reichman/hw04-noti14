@@ -163,21 +163,32 @@ public class ArrCharOps {
      *  The hash value of an empty array is zero.
      */
     public static long hashCode(char[] arr) {
-        if (arr == null) {
+        if (arr == null || arr.length == 0) {
             return 0;
         }
         
-        double arrHashCode = 0;
-        for(int i = 0; i < arr.length; i ++) {
-            int lengthOfArr = 1;
-            arrHashCode = arrHashCode + arr[i] * Math.pow(7, (arr.length - lengthOfArr));
-            if (lengthOfArr != arr.length) {
+        long hashCode = 0;
+        int n = arr.length;
 
-                lengthOfArr ++;
+        for (int i = 0; i < n; i ++) {
 
-            } else lengthOfArr = 0;
+
+            int exponent = n - 1 - i;
+            long powerOf7 = 1;
+            
+            for (int j = 0; j < exponent; j ++) {
+
+                powerOf7 *= 7;
+
+            }
+
+
+            hashCode = hashCode + (arr[i] * powerOf7);
+           
+
         }
-        return (long)arrHashCode;
+
+        return hashCode;
     }
 
     /**

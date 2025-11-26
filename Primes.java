@@ -44,7 +44,7 @@ public class Primes {
             }
         }
 
-        int percent = (counter % n );
+        int percent = (int)(((double) counter / n) * 100 );
 
         System.out.println("There are " + counter + " primes between 2 and " + n + " " + "(" + percent + "% " + "are " + "primes)");
      
