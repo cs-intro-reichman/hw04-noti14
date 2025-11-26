@@ -34,6 +34,8 @@ public class Primes {
        
 
 
+        System.out.println("Prime numbers up to " + n + ":") ;
+
         int counter = 0;
         for (int j = 0; j < primes.length; j ++) {
             if (primes[j] == true) {
